@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="FeedbackBoard.Api/FeedbackBoard.Api.csproj" />
+  <Project Path="FeedbackBoard.Core/FeedbackBoard.Core.csproj" />
+  <Project Path="FeedbackBoard.Infrastructure/FeedbackBoard.Infrastructure.csproj" />
+  <Project Path="FeedbackBoard.Tests/FeedbackBoard.Tests.csproj" />
+</Solution>
