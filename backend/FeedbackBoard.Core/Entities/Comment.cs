@@ -12,6 +12,7 @@ public class Comment : IHasTimestamps
     public User Author {get; set;} = null!;
     public Guid ParentCommentId { get; set; }
     public Comment? ParentComment {get; set;} = null;
+    public ICollection<Comment> Replies { get; set; } = [];
     public bool IsDeleted {get; set;} = false;
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }

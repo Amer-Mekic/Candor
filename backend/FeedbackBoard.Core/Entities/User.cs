@@ -16,6 +16,7 @@ public class User : IHasTimestamps
     public ICollection<Idea> Ideas { get; set; } = [];
     public ICollection<Vote> Votes { get; set; } = [];
     public ICollection<Comment> Comments { get; set; } = [];
+    public ICollection<RefreshToken> Tokens { get; set; } = [];
 }
 
 public enum UserRole { User, Admin }

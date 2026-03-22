@@ -8,5 +8,5 @@ public class Category
     public string Color { get; set; } = "";
     public int SortOrder { get; set; } = 0;
     public DateTime CreatedAt { get; set; }
-    public ICollection<Idea> Comments { get; set; } = [];
+    public ICollection<Idea> Ideas { get; set; } = [];
 }

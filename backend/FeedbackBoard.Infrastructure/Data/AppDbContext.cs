@@ -14,20 +14,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
 
     protected override void OnModelCreating(ModelBuilder b)
     {
-        b.Entity<Vote>()
-         .HasIndex(v => new { v.IdeaId, v.UserId })
-         .IsUnique();
-
-        b.Entity<Idea>()
-         .HasQueryFilter(i => !i.IsDeleted);
-
-        b.Entity<Idea>()
-         .Property(i => i.Status)
-         .HasConversion<string>();
-
-        b.Entity<User>()
-         .Property(u => u.Role)
-         .HasConversion<string>();
+        b.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
     }
 
     public override Task<int> SaveChangesAsync(CancellationToken ct = default)
